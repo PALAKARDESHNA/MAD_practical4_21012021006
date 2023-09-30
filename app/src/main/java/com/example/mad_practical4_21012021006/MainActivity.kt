@@ -10,12 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         var button = findViewById<View>(R.id.button3)
+        var button2 = findViewById<View>(R.id.button4)
         button.setOnClickListener {
-            intent = Intent(this, LoginActivity::class.java)
+            intent = Intent(this,login::class.java)
             startActivity(intent)
-
+        }
+        button2.setOnClickListener {
+            intent = Intent(this , reg::class.java)
+            startActivity(intent)
         }
     }
 }
